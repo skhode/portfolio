@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.100.1" />
+
+    <meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta https-equiv="X-UA-Compatible" content="ie=edge"/>
+
+<script>
+    (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', '');
+</script>
+
+
+<title></title>
+<style>
+
+    .rad-fade-in {
+        will-change: opacity, transform;
+        animation-name: rad-fade-in-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-fallback {
+        0% {
+            opacity: 0;
+        }
+
+        75% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fonts-loaded .rad-fade-in.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in.rad-animate {
+        animation-name: rad-fade-in;
+        animation-duration: 1.1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    .rad-fade-in-long {
+        will-change: opacity, transform;
+        animation-name: rad-fade-in-long-fallback;
+        animation-duration: 8s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long-fallback {
+        0% {
+            opacity: 0;
+        }
+
+        75% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+    }
+
+    .fonts-loaded .rad-fade-in-long.rad-animate {
+        animation-name: rad-fade-in-long;
+        animation-duration: 2s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-fade-in-long {
+        0% {
+            opacity: 0;
+        }
+
+        20% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    .rad-fade-down {
+        will-change: opacity, transform;
+        animation-name: rad-fade-down-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        transform: translateY(-30px);
+    }
+
+    @keyframes rad-fade-down-fallback {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        75% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fonts-loaded .rad-fade-down.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    .fonts-loaded .rad-fade-down.rad-animate {
+        animation-name: rad-fade-down;
+        animation-duration: 1.1s;
+    }
+
+    @keyframes rad-fade-down {
+        0% {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    .rad-scale-down {
+        will-change: opacity, transform;
+        animation-name: rad-scale-down-fallback;
+        animation-duration: 5s;
+        animation-fill-mode: both;
+        transform-origin: 50% 0;
+    }
+
+    @keyframes rad-scale-down-fallback {
+        0% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        75% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+
+    .fonts-loaded .rad-scale-down.rad-waiting {
+        animation-name: none;
+        opacity: 0;
+        transform: scaleY(0.95);
+    }
+
+    .fonts-loaded .rad-scale-down.rad-animate {
+        animation-name: rad-scale-down;
+        animation-duration: 1.1s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes rad-scale-down {
+        0% {
+            opacity: 0;
+            transform: scaleY(0.95);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scaleY(1);
+        }
+    }
+</style>
+
+
+<link rel="stylesheet" href="https://shubhamkhode.me/css/main.css"/>
+
+<link rel="stylesheet" href="https://shubhamkhode.me/css/rad-icons.css"/>
+
+<link rel="stylesheet" href="https://shubhamkhode.me/css/custom.css"/>
+
+
+
+
+
+</head>
+
+<body>
+
+	<header class="header fixed-top rad-animation-group" id="header">
+  <div class="container rad-fade-in">
+    <nav class="navbar navbar-expand-lg navbar-light p-0">
+      <a class="navbar-brand" href="https://shubhamkhode.me">
+        <span>Shubham</span>
+        <span>Khode</span>
+
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent, #header"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-lg-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="https://shubhamkhode.me">HOME</a>
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#about"
+              >ABOUT</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#portfolio"
+              >PORTFOLIO</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a data-scroll class="nav-link" href="#contact"
+              >CONTACT</a
+            >
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
+
+
+<section class="rad-showcase rad-showcase--index rad-animation-group rad-fade-down">
+  <div class="rad-showcase__bg">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://shubhamkhode.me/img/showcase/showcase.png"
+      data-srcset="https://shubhamkhode.me/img/showcase/showcase.png 1x, https://shubhamkhode.me/img/showcase/showcase@2x.png 2x"
+      alt=""
+    />
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-8 col-lg-7 col-xl-6">
+        <h1 class="display-1">
+          Hello, I’m Shubham.
+          <br />
+          <span
+            >Data Science &amp; Analytics Enthusiast</span
+          >
+        </h1>
+        <p class="lead">
+          I believe that most complex business problems have a simple yet elegant solution waiting to be found. I love using data to find these solutions, a powerful tool that can transform any industry it is leveraged in.
+        </p>
+        <p class="lead" >
+          "Without data you’re just another person with an opinion."
+          <br />
+          <em>— W. Edwards Deming</em>
+        </p>
+        <div>
+          <a
+            href="mailto:skhode2@uic.edu"
+            class="btn btn-primary"
+          >
+            <i class="icon-mail-fill"></i>
+            Contact
+          </a>
+
+          <a href="https://www.linkedin.com/in/shubhamkhode/" target="_blank"
+            ><i class="icon-linkedin-line"></i
+          ></a>
+
+          <a href="https://github.com/skhode" target="_blank"
+            ><i class="icon-github-line"></i
+          ></a>
+
+          <a href="https://www.instagram.com/shubham_khode/" target="_blank"
+            ><i class="icon-instagram-line"></i
+          ></a>
+
+          <a href="https://www.facebook.com/SBKhode" target="_blank"
+            ><i class="icon-facebook-line"></i
+          ></a>
+
+          <a href="https://twitter.com/sbkhode" target="_blank"
+            ><i class="icon-twitter-line"></i
+          ></a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="rad-showcase__bg rad-showcase__bg--mobile">
+    <img
+      class="lozad img-responsive"
+      src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+      data-src="https://shubhamkhode.me/img/showcase/showcase-mobile.jpg"
+      alt=""
+    />
+  </div>
+</section>
+
+
+
+
+<section class="section rad-animation-group pb-0" id="about">
+  <div class="container rad-fade-down">
+    <div class="row d-flex flex-column-reverse flex-md-row">
+      <div class="about__profile-picture col-12 col-md-6">
+        <img
+          class="lozad img-responsive image-left-overflow"
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/who-am-i/skhode.png"
+          data-srcset="https://shubhamkhode.me/img/who-am-i/skhode.png 1x, https://shubhamkhode.me/img/who-am-i/skhode.png 2x"
+          alt="Profile Picture"
+        />
+      </div>
+      <div class="col-12 col-md-6 my-auto my-auto">
+        <h2>Who am I?</h2>
+        <p class="lead">
+          <p class="lead"> I am a graduate student in the Business Analytics program offered by the University of Illinois Chicago. My area of focus lies in predictive modelling, machine learning, and advanced analytics. </p> <p class="lead"> IoT, smart phones, fitness trackers and other technologies are generating tremendous amounts of multi-structured data that needs to be leveraged with robust analytics to transform the way businesses and industries are making important decisions and utilizing their resources. </p> <p class="lead"> I intend on helping organizations to capitalize on data technologies and BI to in turn make informed and powerful decisions. </p>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section section--border-bottom rad-animation-group">
+    <div class="container">
+        <div class="row rad-fade-down">
+            <div class="col-12">
+                <h2>Education</h2>
+                <div class="row pt-2 pt-md-4">
+
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                            <div class="education__date">2021 - 2022</div>
+                            <div class="education__title">University of Illinois Chicago (UIC)</div>
+                            <div class="education__degree">
+                                Master of Science, Business Analytics
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-6 mb-4 mb-sm-0">
+                        <div class="education">
+                            <div class="education__date">2012 - 2016</div>
+                            <div class="education__title">University of Mumbai (VJTI)</div>
+                            <div class="education__degree">
+                                Bachelor of Technology, Electronics &amp; Telecommunications Engineering
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="experience" class="section section--border-bottom rad-animation-group">
+    <div class="container">
+        <div class="row flex-column-reverse flex-md-row rad-fade-down">
+            <div class="col-12 col-sm-6 mt-5 mt-sm-0">
+
+                <div class="experience">
+                    <div class="experience__date">August 2019 – June 2021</div>
+                    <div class="experience__title">Business Analyst</div>
+                    <div class="experience__company">Wipro Limited</div>
+                    <div class="experience__place">Vienna, Austria</div>
+                </div>
+
+                <div class="experience">
+                    <div class="experience__date">August 2016 – July 2019</div>
+                    <div class="experience__title">Software Engineer</div>
+                    <div class="experience__company">Wipro Limited</div>
+                    <div class="experience__place">Pune, India</div>
+                </div>
+
+                <div class="experience">
+                    <div class="experience__date">April 2016 – July 2016</div>
+                    <div class="experience__title">Project Engineer Intern</div>
+                    <div class="experience__company">Wipro Limited</div>
+                    <div class="experience__place">Mumbai, India</div>
+                </div>
+
+            </div>
+            <div class="col-12 col-sm-6">
+                <h2>Experience</h2>
+                <p class="lead">
+                    Over 5&#43; years of experience working at a leading software &amp; consulting company, for one of the largest telecom clients in Austria. I design &amp; develop s/w products, right from ideation to deployment, with the focus on helping businesses and improving people&#39;s lives.
+                </p>
+                <p class="lead">
+                    During my time at client’s headquarters in Vienna, I had the opportunity to analyze, understand, and extract data to derive meaningful insights that have a positive impact in defining customer’s strategy and progress.
+                </p>
+                <a href="https://www.linkedin.com/in/shubhamkhode/" class="btn btn-primary"
+                   target="_blank">
+                    <i class="icon-linkedin-fill"></i>
+                    Linkedin
+                    <i class="icon-arrow-right"></i></a>
+                <a href="https://github.com/skhode/portfolio/raw/main/docs/Shubham_Khode_Resume.pdf" class="btn btn-frameless"
+                   target="_blank">
+                    <i class="icon-profile-fill"></i>
+                    Download My Resume
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="portfolio" class="section section--border-bottom">
+  <div class="container">
+    <h2 class=" rad-animation-group rad-fade-down">
+      Skills &amp; Projects
+    </h2>
+    <div class="row row--padded rad-animation-group rad-fade-down">
+      <div class="col-12">
+        <div class="clients">
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/pyth_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/pyth_logo.png 1x, https://shubhamkhode.me/img/clients/pyth_logo.png 2x"
+                alt="Python"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/pandas_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/pandas_logo.png 1x, https://shubhamkhode.me/img/clients/pandas_logo.png 2x"
+                alt="Pandas"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/num_py_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/num_py_logo.png 1x, https://shubhamkhode.me/img/clients/num_py_logo.png 2x"
+                alt="NumPy"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/sklearn_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/sklearn_logo.png 1x, https://shubhamkhode.me/img/clients/sklearn_logo.png 2x"
+                alt="Sklearn"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/matplot_lib_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/matplot_lib_logo.png 1x, https://shubhamkhode.me/img/clients/matplot_lib_logo.png 2x"
+                alt="Matplotlib"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/mach_learn_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/mach_learn_logo.png 1x, https://shubhamkhode.me/img/clients/mach_learn_logo.png 2x"
+                alt="Machine Learning"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/sql_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/sql_logo.png 1x, https://shubhamkhode.me/img/clients/sql_logo.png 2x"
+                alt="R"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/r_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/r_logo.png 1x, https://shubhamkhode.me/img/clients/r_logo.png 2x"
+                alt="SQL"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/tableau_pub_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/tableau_pub_logo.png 1x, https://shubhamkhode.me/img/clients/tableau_pub_logo.png 2x"
+                alt="Tableau"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/az_web_sevices_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/az_web_sevices_logo.png 1x, https://shubhamkhode.me/img/clients/az_web_sevices_logo.png 2x"
+                alt="AWS"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/ap_spark_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/ap_spark_logo.png 1x, https://shubhamkhode.me/img/clients/ap_spark_logo.png 2x"
+                alt="Apache Spark"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/gt_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/gt_logo.png 1x, https://shubhamkhode.me/img/clients/gt_logo.png 2x"
+                alt="Git"
+              />
+          </div>
+
+          <div class="clients__item">
+              <img
+                class="lozad img-responsive"
+                src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                data-src="https://shubhamkhode.me/img/clients/jira_logo.png"
+                data-srcset="https://shubhamkhode.me/img/clients/jira_logo.png 1x, https://shubhamkhode.me/img/clients/jira_logo.png 2x"
+                alt="Jira"
+              />
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+    >
+
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Fine-Grained, Scaled Forecasting of Walmart&#39;s Retail Sales</h3>
+        <p class="lead">
+          Retailers like Walmart face difficulties in developing timely sales projections at a granularity that allows them to make exact inventory adjustments. We address this by leveraging distributed programming in Spark and Facebook’s Prophet library to build hundreds of models and forecasts for each store-department combination, thus drastically lowering the time to train the entire collection of time-series models.
+        </p>
+        <a href="https://github.com/skhode/forecasting-sales-for-walmart-at-scale" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-left-backward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/walmartforecast.png"
+          data-srcset="https://shubhamkhode.me/img/works/walmartforecast.png 1x, https://shubhamkhode.me/img/works/walmartforecast.png 2x"
+          alt="Fine-Grained, Scaled Forecasting of Walmart&#39;s Retail Sales"
+        />
+      </div>
+
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down "
+    >
+
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-right-backward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/spotify-analysis.png"
+          data-srcset="https://shubhamkhode.me/img/works/spotify-analysis.png 1x, https://shubhamkhode.me/img/works/spotify-analysis.png 2x"
+          alt="Spotify – To be or Not To be Popular?"
+        />
+      </div>
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Spotify – To be or Not To be Popular?</h3>
+        <p class="lead">
+          Millions of records are created and downloaded every day, but only a select few are considered popular. Identifying popular music records helps streaming platforms make an efficient feedback loop. The project investigates various acoustic features to crack the secret sauce behind popular songs and use this to develop prediction &amp; recommendation models. On top of that, it also involves visualizing weekly charts data to answer riveting questions related to top-ranking artists and songs.
+        </p>
+        <a href="https://github.com/skhode/spotify-analysis-prediction-recommendation" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+    >
+
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Choose Wisely – Loan Investment Decisions for Lending Club</h3>
+        <p class="lead">
+          For P2P online loan platforms, lending loans to ‘risky’ applicants is one of the largest sources of financial (credit) loss. We use various EDA techniques to identify driving factors that indicate if a person is likely to default and utilise this knowledge for their portfolio &amp; risk assessment. To improve borrower scoring quality and enable lenders to devise investment strategies, we developed data-driven models that predict the probability of default and estimate annual returns.
+        </p>
+        <a href="https://github.com/skhode/loan-performance-investment-decisions" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-left-forward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/lc.png"
+          data-srcset="https://shubhamkhode.me/img/works/lc.png 1x, https://shubhamkhode.me/img/works/lc.png 2x"
+          alt="Choose Wisely – Loan Investment Decisions for Lending Club"
+        />
+      </div>
+
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down "
+    >
+
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-right-forward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/tripadvisorreviews.png"
+          data-srcset="https://shubhamkhode.me/img/works/tripadvisorreviews.png 1x, https://shubhamkhode.me/img/works/tripadvisorreviews.png 2x"
+          alt="Hotel Manager&#39;s perspective - Tripadvisor w/ Deep Learning"
+        />
+      </div>
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Hotel Manager&#39;s perspective - Tripadvisor w/ Deep Learning</h3>
+        <p class="lead">
+          Consumers frequently rely on hotel reviews to make booking decisions. Managerial responses to such reviews may strengthen existing customer loyalty and convert dissatisfied consumers into loyal ones, but these responses are poorly understood. The project provides a framework using a deep-learning approach (BERT) to define the criticality of reviews and prioritize responses. In addition, we also analyse if the hotel managers are correctly addressing customers&#39; concerns based on semantic similarity between review-response.
+        </p>
+        <a href="https://github.com/skhode/tripadvisor-review-response-analysis" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+    >
+
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>University Decision - answering the If&#39;s and the Where&#39;s</h3>
+        <p class="lead">
+          Every year, approximately 15 million students apply to a university to pursue higher education. The project focuses on optimizing the university selection process by predicting the chance of admission and suggests top recommendations based on the student’s profile (like competitive exam score, years of work experience, etc.). In order to make this tool publicly accessible to students, we deploy the Flask app with an ML model using AWS Elastic Beanstalk.
+        </p>
+        <a href="https://github.com/skhode/university-prediction-and-recommendation-mlops" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-left-backward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/university-admit.png"
+          data-srcset="https://shubhamkhode.me/img/works/university-admit.png 1x, https://shubhamkhode.me/img/works/university-admit.png 2x"
+          alt="University Decision - answering the If&#39;s and the Where&#39;s"
+        />
+      </div>
+
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down "
+    >
+
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-right-backward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/yelp-reviews-analysis.png"
+          data-srcset="https://shubhamkhode.me/img/works/yelp-reviews-analysis.png 1x, https://shubhamkhode.me/img/works/yelp-reviews-analysis.png 2x"
+          alt="Understanding Sentiment w/ Text Analysis on Yelp Reviews"
+        />
+      </div>
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Understanding Sentiment w/ Text Analysis on Yelp Reviews</h3>
+        <p class="lead">
+          Online reviews, both good and bad, have an impact on business. Keeping an eye on what customers say about business is crucial to understand what’s working well and what needs improving. We look at Yelp restaurant reviews and apply vectorization &amp; sentiment analysis to reveal both positive and negative aspects of customers’ experience. NLP comes in handy to sift through hundreds of reviews and get the actionable insights needed to point business in the right direction.
+        </p>
+        <a href="https://github.com/skhode/text-mining-yelp-reviews" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+
+    </div>
+
+    <div
+      class="row row--padded rad-animation-group rad-fade-down flex-column-reverse flex-md-row"
+    >
+
+      <div class="col-12 col-md-5 mt-4 mt-md-0 my-md-auto">
+        <h3>Know Your Customers - Market Segmentation w/ Clustering</h3>
+        <p class="lead">
+          Unlike the traditional way of segmenting markets based on demographics, we apply clustering techniques on purchasing behaviour (volume, frequency, susceptibility to discounts, and brand loyalty). This enables clients to design more cost-effective promotions that are precisely targeted to specific needs of consumer. In a long run, it benefits the company by efficiently using their corporate resources and marketing budget to make better strategic decisions.
+        </p>
+        <a href="https://github.com/skhode/market-segmentation-bath-soap-company" class="btn btn-primary"
+          target="_blank">Know more<i class="icon-arrow-right"></i
+        ></a>
+      </div>
+      <div class="col-12 col-md-7 pl-md-0 text-right">
+        <img
+          class='lozad img-responsive img-clip-left-forward'
+          src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+          data-src="https://shubhamkhode.me/img/works/market-segmentation.png"
+          data-srcset="https://shubhamkhode.me/img/works/market-segmentation.png 1x, https://shubhamkhode.me/img/works/market-segmentation.png 2x"
+          alt="Know Your Customers - Market Segmentation w/ Clustering"
+        />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<section class="section rad-animation-group section--border-bottom">
+    <div class="container">
+        <h2 class="rad-fade-down">Testimonials</h2>
+        <div class="row row--padded mb-0 rad-fade-down">
+
+            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
+                <i class="icon-quote"></i>
+                <p>
+                    Shubham joined my team when I was taking care of one of the most important sales applications within our company as Delivery Lead. From day one he was one of the most reliable, versatile go-to guys in our team. Whatever challenge we faced he was always quick with offering a solution and he was also a very big help in syncing up with our offshore team in India. Always ridiculously motivated, ready for action, eager to learn and hungry for more responsibility he soon started to take over Business Analyst-duties as well (while at the same time still providing his much needed developer-skills and saving the day on multiple occasions). An exceptionally talented colleague who earned my highest recommendation and I can&#39;t wait to get another chance to work with him again.
+                </p>
+                <div class="testimonial__author">
+                    <img class="lozad testimonial__author-image"
+                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                         data-src="https://shubhamkhode.me/img/testimonials/alex.png"
+                         data-srcset="https://shubhamkhode.me/img/testimonials/alex.png 1x, https://shubhamkhode.me/img/testimonials/alex.png 2x"
+                         alt="Alexander Weber"/>
+                    <div class="testimonial__author-info">
+                        <h4>Alexander Weber</h4>
+                        <span>Product Owner, A1 Telekom Austria AG</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
+                <i class="icon-quote"></i>
+                <p>
+                    Shubham is an outstanding professional, among the most promising associates we have taken on. His input is creative and insightful and I trust him to manage our more complex tasks. He has consistently demonstrated his impeccable organization abilities by getting hold of the projects from the conceptualization phase itself. Thereafter, he is extremely efficient in implementing the strategies and adapting to the ever-changing environment of the project. He also shows his proactivity by taking the initiative in constantly upgrading his knowledge and keeping himself informed about the latest in the field. Shubham embodies a perfect mix of personal impact, analytical ability, and excellent problem-solving skills - making him a true asset to any company.
+                </p>
+                <div class="testimonial__author">
+                    <img class="lozad testimonial__author-image"
+                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                         data-src="https://shubhamkhode.me/img/testimonials/daria.png"
+                         data-srcset="https://shubhamkhode.me/img/testimonials/daria.png 1x, https://shubhamkhode.me/img/testimonials/daria.png 2x"
+                         alt="Daria Horvat"/>
+                    <div class="testimonial__author-info">
+                        <h4>Daria Horvat</h4>
+                        <span>Program Director, Wipro Limited</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 mb-5 mb-md-0 testimonial">
+                <i class="icon-quote"></i>
+                <p>
+                    Shubham was one of the colleagues that was always open to take over new challenges. He is very talented, extremely precise when analyzing topics, and can lead team members to fulfill their goals. He is a proficient developer, and equally skilled business analyst. Shubham is highly motivated and driven by an amazing passion to succeed. Even under pressure he is able to meet timelines and is always eager to help all team members. I am very proud that we worked together and I am sure he will help more teams to meet their highest potential. I really hope we once can work together again. Until then I am sure he will help a lot of clients in other projects with his expertise and his leadership mentality.
+                </p>
+                <div class="testimonial__author">
+                    <img class="lozad testimonial__author-image"
+                         src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
+                         data-src="https://shubhamkhode.me/img/testimonials/stephan.png"
+                         data-srcset="https://shubhamkhode.me/img/testimonials/stephan.png 1x, https://shubhamkhode.me/img/testimonials/stephan.png 2x"
+                         alt="Stephan Haslinger"/>
+                    <div class="testimonial__author-info">
+                        <h4>Stephan Haslinger</h4>
+                        <span>Founder, Tisco</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="contact" class="section section--contact pt-0">
+    <div class="container">
+        <div class="contact">
+            <h2>Contact</h2>
+                <div class="contact__info">
+                    <h6>Feel free to drop me a message if you have any questions or just want to say &#34;Hi!&#34; and I’ll try my best to get back to you.</h6>
+                    <h4>Phone Number</h4>
+                    <span>&#43;1 (858) 305-7003</span>
+                    <h4>Email</h4>
+                    <span><a href="mailto:skhode2@uic.edu">skhode2@uic.edu</a></span>
+                    <h4>Address</h4>
+                    <span>S Claremont Avenue, Chicago, IL 60612</span>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+
+
+
+
+	<footer class="footer">
+  <div class="container">
+    <div class="footer__left">
+      <div class="footer__copy">
+        © Raditian. All rights reserved. Edited by Shubham Khode.
+      </div>
+    </div>
+    <div class="footer__links">
+      <ul class="navbar-nav ">
+        <li class="nav-item">
+          <a class="nav-link" href="https://shubhamkhode.me/">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://shubhamkhode.me/#about">ABOUT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://shubhamkhode.me/#portfolio">PORTFOLIO</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="https://shubhamkhode.me/#contact">CONTACT</a>
+        </li>
+
+      </ul>
+    </div>
+    <div class="footer__right">
+      <a href="https://radity.com/"
+        ><img
+          src="https://shubhamkhode.me/img/general/design-and-code-radity.png"
+          srcset="https://shubhamkhode.me/img/general/design-and-code-radity.png 1x, https://shubhamkhode.me/img/general/design-and-code-radity@2x.png 2x"
+          alt="Design &amp; Code - Radity"
+      /></a>
+    </div>
+  </div>
+</footer>
+
+    <script src='https://shubhamkhode.me/js/rad-animations.js'></script>
+<script src='https://shubhamkhode.me/js/library/lozad.min.js'></script>
+<script>
+  window.addEventListener("load", function() {
+    var observer = window.lozad(".lozad", {
+      rootMargin: window.innerHeight / 2 + "px 0px",
+      threshold: 0.01
+    });
+    observer.observe();
+  });
+</script>
+<script src='https://shubhamkhode.me/js/library/jquery-3.3.1.slim.min.js'></script>
+<script src='https://shubhamkhode.me/js/library/bootstrap.min.js'></script>
+<script src='https://shubhamkhode.me/js/sticky-header.js'></script>
+<script src='https://shubhamkhode.me/js/library/smooth-scroll.polyfills.min.js'></script>
+<script src='https://shubhamkhode.me/js/library/fontfaceobserver.js'></script>
+<script>
+  (function(w) {
+
+    if (w.document.documentElement.className.indexOf("fonts-loaded") > -1) {
+      return;
+    }
+    var fontA = new w.FontFaceObserver("Inter", {
+      weight: 300
+    });
+    var fontB = new w.FontFaceObserver("Inter", {
+      weight: 400
+    });
+    var fontC = new w.FontFaceObserver("Inter", {
+      weight: 500
+    });
+    var fontD = new w.FontFaceObserver("Inter", {
+      weight: 600
+    });
+    var fontE = new w.FontFaceObserver("Inter", {
+      weight: 700
+    });
+    var fontF = new w.FontFaceObserver("Inter", {
+      weight: 900
+    });
+    w.Promise.all([fontA.load(), fontC.load(), fontF.load()]).then(function() {
+      w.document.documentElement.className += " fonts-loaded";
+    });
+  })(this);
+</script>
+<script>
+  const scroll = new SmoothScroll('a[href*="#"]');
+    $('a.nav-link').on('click', () => {
+      const navbar = $('.navbar-collapse');
+      if (navbar && navbar.hasClass('show')) {
+        $('.navbar-toggler').click();
+      }
+    })
+</script>
+
+</body>
+
+</html>
